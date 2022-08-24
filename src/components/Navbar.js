@@ -2,6 +2,8 @@ import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
 import Login from "./Login";
 import Contact from "./Contact";
+import Cart from "./Cart";
+
 
 function Navbar() {
 
@@ -10,7 +12,7 @@ function Navbar() {
 <div>
    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/Contact">🙋‍♀️ Maleena's</NavLink>
+    <NavLink className="navbar-brand" to="/ecomm">🙋‍♀️ Maleena's</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -23,16 +25,16 @@ function Navbar() {
           <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/products">Categories</NavLink>
+          <NavLink className="nav-link active" to="/products">Categories</NavLink>
         </li>
         
         
         <li className="nav-item">
-          <NavLink className="nav-link disabled" to="/contact" tabIndex="-1" aria-disabled="true">Ask anything</NavLink>
+          <NavLink className="nav-link-active"   to="/Contact">Ask Us</NavLink>
         </li>
       </ul>
       <form className="d-flex">
-        <input className="form-control me-5" type="search" placeholder="Search" aria-label="Search"/>
+        <input className="form-control flex-1" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-primary me-1" type="submit" style={{}}> Search</button>
       </form>
       <div className='buttons'>

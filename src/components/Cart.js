@@ -28,6 +28,7 @@ function Cart() {
                     <button  onClick={()=>handleClose(cartItem)} className='btn-close float-end' aria-label="close"></button>
                     <div className='row justify-content-center'>
                         <div className='col-md-4'>
+                            <h2>Cart Item</h2>
                             <img  src={cartItem.image} alt={cartItem.title} height="200" width="100px"/>
                           
                              <p className='lead fw-bold'>${cartItem.price}
@@ -41,7 +42,7 @@ function Cart() {
                              <button className='btn btn-outline-primary'>
                                  <i className='fa fa-plus'></i>
                             </button>
-                        
+                        <div>{<checkout/>}</div>
                         </div>
                     </div>
                 </div>
