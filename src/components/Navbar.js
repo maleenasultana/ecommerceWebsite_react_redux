@@ -1,8 +1,9 @@
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
-import Login from "./Login";
-import Contact from "./Contact";
-import Cart from "./Cart";
+
+
+
+
 
 
 function Navbar() {
@@ -38,7 +39,7 @@ function Navbar() {
         <button className="btn btn-outline-primary me-1" type="submit" style={{}}> Search</button>
       </form>
       <div className='buttons'>
-      <NavLink to="/cart" className='btn btn-outline-warning ms-2'>
+      <NavLink to={`/cart`} className='btn btn-outline-warning ms-2'>
             <i className='fNavLinkfa-shopping-cart me-2 mx-2 '></i> Cart({state.length})</NavLink>
         <NavLink to="/login" className='btn btn-outline-danger ms-2'>
             <i className='fNavLinkfa-sign-in me-1 mx-2 ms-2 '></i>Login</NavLink>

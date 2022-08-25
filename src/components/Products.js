@@ -22,9 +22,9 @@ function Products() {
             setFilter(await response.json());
             setLoading(false);
             console.log(filter)
-        }
-
-        return () =>{
+        
+ 
+    
 
             componentMounted = false;
         }
@@ -55,7 +55,7 @@ const Loading =()=>{
 };
 
 const filterProduct=(cat)=>{
-const updatedList = data.filter((x)=> x.category ===cat);
+const updatedList = data.filter((x)=> x.category === cat);
 setFilter(updatedList);
 }
 
@@ -67,7 +67,7 @@ const ShowProducts = () => {
             <button className='btn btn-outline-info me-2' onClick={()=>setFilter(data)}>Categories</button>
             <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("clothing")}>Clothing</button>
             <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("women's clothing")}>Fashion</button>
-            <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("jewellery")}>jewellery</button>
+            <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("jewellery")}>Jewellery</button>
             <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("electronics")}>Electronics</button>
             <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("home")}>Home Decors</button>
             <button className='btn btn-outline-info me-2'onClick={()=>filterProduct("men's clothing")}>Sale</button>

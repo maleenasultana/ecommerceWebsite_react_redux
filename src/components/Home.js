@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className='hero'>
       <div className="card bg-dark text-white border-0">
-  <img src="https://th.bing.com/th/id/OIP.oZgDj2WUkwzG0A1Il8yucwHaE6?w=261&h=180&c=7&r=0&o=5&pid=1.7 " width="800px" height="400px" className="card-img" alt="background image"/>
+  <img src="https://th.bing.com/th/id/OIP.oZgDj2WUkwzG0A1Il8yucwHaE6?w=261&h=180&c=7&r=0&o=5&pid=1.7" width="800px" height="400px" className="card-img" alt="background"/>
   <div className="card-img-overlay d-flex flex-column justify-content-center">
     <div className='container'>
       <h5 className="card-title display-3 fw-border mb-0 ">BEST COLLECTION</h5>
@@ -22,4 +22,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

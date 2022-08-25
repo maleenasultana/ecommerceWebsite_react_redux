@@ -3,7 +3,10 @@ import {useSelector} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {useDispatch} from "react-redux";
 import { deleteCart} from '../redux/action/index';
-import Checkout from './Checkout';
+import Product from './Product';
+
+
+
 
 
 
@@ -22,6 +25,7 @@ function Cart() {
     }
     const cartItem= (cartItem)=>{
         return(
+            <>
             <div className='px-4 my-5 bg-light rounded-3' key={cartItem.id}>
 
                 <div className='container py-4'>
@@ -38,15 +42,26 @@ function Cart() {
                             <button className='btn btn-outline-danger me-4' >
                                  <i className='fa fa-minus'></i>
                              </button>
-                             {/* onClick={()=> handleClose(cartItem)} */}
+                             onClick={()=> handleClose(cartItem)}
                              <button className='btn btn-outline-primary'>
                                  <i className='fa fa-plus'></i>
                             </button>
+                            <div className='col-md-3 mb-4'>
+                <div className="card h-100 text-center p-4" key={Product.id}>
+  <img src={Product.image} className="card-img-top" alt={Product.title} height="200px"/>
+  <div className="card-body">
+    <h5 className="card-title mb-0">{Product.title.substring(0,12)}...</h5>
+    <p className="card-text lead fw-bold">${Product.price}</p>
+    <NavLink to={`/products/${Product.id}`} className="btn btn-outline-primary">Buy Now</NavLink>
+  </div>
+</div>
+                </div>
                         <div>{<checkout/>}</div>
                         </div>
                     </div>
                 </div>
             </div>
+            </>
         );
     }
 
@@ -67,7 +82,7 @@ function Cart() {
         return(
             <div className='conatainer'>
                 <div className='row'>
-                    <NavLink to="/checkout" className="btn btn-outline-success mb-5">Checkout</NavLink>
+                    <NavLink  className="btn btn-outline-success mb-5" to="/checkout">Checkout</NavLink>
                 </div>
             </div>
         )

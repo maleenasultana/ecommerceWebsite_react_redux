@@ -4,14 +4,14 @@ import { useDispatch } from 'react-redux';
 import {addCart} from "../redux/action"
 import {useParams} from "react-router";
 import { NavLink } from 'react-router-dom';
-import Checkout from './Checkout';
+
 
 function Product() {
 
 const {id} = useParams();
 
     const [product, setProduct] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [ setLoading] = useState(false);
 
     const dispatch  =useDispatch();
 
@@ -80,7 +80,7 @@ const ShowProduct=()=>{
     <div>
          <div className='container py-5'>
             <div className='row py-4'>
-                Loading? <Loading/> : <ShowProduct/>
+                loading ? <Loading/> : <ShowProduct/>
             </div>
          </div>
     </div>

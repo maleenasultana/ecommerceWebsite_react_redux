@@ -29,11 +29,11 @@ const cart =[];
                           }else{
                             return state.map((x)=> x.id === product.id ? {...x, qty: x.qty-1} : x );
                           }
-                          break;
+                         
 
                           default:
                             return state;
-                            break;
+                           
 
     }
 }
